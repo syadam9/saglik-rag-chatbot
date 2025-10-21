@@ -3,8 +3,8 @@
 **Akbank GenAI Bootcamp Projesi**
 
 RAG (Retrieval Augmented Generation) mimarisi ile geliştirilmiş, 43.000+ Türkçe tıbbi makaleden oluşan veri seti üzerinde eğitilmiş bir sağlık asistanıdır. Kullanıcıların tıbbi sorularına güvenilir ve kaynaklı cevaplar sunarak sağlık okuryazarlığını artırmayı hedefler.
-
 Uygulama, karmaşık tıbbi bilgilere erişim zorluğunu çözerek, kullanıcıların sağlık sorularına anında ve güvenilir yanıtlar alabilmelerini sağlar.
+
 ---
 
 ## 🎯 Proje Amacı
@@ -16,6 +16,25 @@ Bu proje, kullanıcıların sağlık konularında güvenilir bilgiye hızlı ve 
 - ✅ Yapay zeka destekli sağlık bilgi sisteminin geliştirilmesi
 
 hedeflenmiştir.
+
+---
+
+## 🌐 Web Arayüzü & Kullanım Kılavuzu
+
+### 🚀 Uygulama:
+**👉 https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot**
+
+![ ](https://github.com/syadam9/saglik-rag-chatbot/blob/main/assets/gif1.gif?raw=true)
+
+
+*GIF: Chatbot'un kullanımı gösterilmektedir*
+
+### Özellikler:
+
+- ✅ **Chat Geçmişi:** Önceki sorularınızı görebilirsiniz
+- ✅ **Kaynak Referansları:** Her cevap hangi makaleden geldiğini gösterir
+- ✅ **Temizle Butonu:** Sohbeti sıfırlayabilirsiniz
+- ✅ **Örnek Sorular:** Hızlı başlamak için hazır sorular
 
 ---
 
@@ -154,22 +173,6 @@ answer = gemini.generate(prompt)
 
 ---
 
-## 🌐 Web Arayüzü & Kullanım Kılavuzu
-
-### 🚀 Uygulama:
-**👉 https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot**
-
-![ ](https://github.com/syadam9/saglik-rag-chatbot/blob/main/assets/gif1.gif?raw=true)
-
-
-*GIF: Chatbot'un kullanımı gösterilmektedir*
-
-### Özellikler:
-
-- ✅ **Chat Geçmişi:** Önceki sorularınızı görebilirsiniz
-- ✅ **Kaynak Referansları:** Her cevap hangi makaleden geldiğini gösterir
-- ✅ **Temizle Butonu:** Sohbeti sıfırlayabilirsiniz
-- ✅ **Örnek Sorular:** Hızlı başlamak için hazır sorular
 
 ---
 
@@ -231,11 +234,10 @@ Bu proje Akbank GenAI Bootcamp kapsamında geliştirilmiştir.
 ---
 
 **Seymen Sezgin**
-Uygulama Linki : https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot
-Kaggle Notebook Linki : https://www.kaggle.com/code/seymensezgin/turkish-medical-rag-chatbot
+**Uygulama Linki** : https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot
+**Kaggle Notebook Linki** : https://www.kaggle.com/code/seymensezgin/turkish-medical-rag-chatbot
 
 ---
 
 ---
 
-**⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!**
