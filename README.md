@@ -237,8 +237,8 @@ Bu proje Akbank GenAI Bootcamp kapsamında geliştirilmiştir.
 
 - **🤖 Uygulama Linki:** https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot
 - **📓 Kaggle Notebook:** https://www.kaggle.com/code/seymensezgin/turkish-medical-rag-chatbot
-- 
-- **Seymen Sezgin**
+
+**Seymen Sezgin**
 
 ---
 
