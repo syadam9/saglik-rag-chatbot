@@ -2,8 +2,9 @@
 
 **Akbank GenAI Bootcamp Projesi**
 
-RAG (Retrieval Augmented Generation) teknolojisi ile geliştirilmiş Türkçe tıbbi bilgi asistanı. 43,000+ tıbbi makaleden bilgi çekerek kullanıcı sorularını yanıtlar.
+RAG (Retrieval Augmented Generation) mimarisi ile geliştirilmiş, 43.000+ Türkçe tıbbi makaleden oluşan veri seti üzerinde eğitilmiş bir sağlık asistanıdır. Kullanıcıların tıbbi sorularına güvenilir ve kaynaklı cevaplar sunarak sağlık okuryazarlığını artırmayı hedefler.
 
+Uygulama, karmaşık tıbbi bilgilere erişim zorluğunu çözerek, kullanıcıların sağlık sorularına anında ve güvenilir yanıtlar alabilmelerini sağlar.
 ---
 
 ## 🎯 Proje Amacı
@@ -99,8 +100,8 @@ user_question = "Migren ağrısı nasıl geçer?"
 question_vector = embedding_model.encode(user_question)  # 384 boyutlu vektör
 
 # 3. BENZER CHUNKLARI BULMA (FAISS)
-similar_chunks = faiss_index.search(question_vector, top_k=3)
-# En benzer 3 makale parçası bulunur
+similar_chunks = faiss_index.search(question_vector, top_k=5)
+# En benzer 5 makale parçası bulunur
 
 # 4. CONTEXT OLUŞTURMA
 context = "\n".join(similar_chunks)
@@ -132,59 +133,6 @@ answer = gemini.generate(prompt)
 
 ---
 
-## 📦 Çalışma Kılavuzu
-
-### Gereksinimler:
-- Python 3.8+
-- 8 GB RAM (minimum)
-- GPU (önerilir, CPU'da da çalışır)
-
-### 1️⃣ Kurulum
-```bash
-# Repo'yu klonla
-git clone https://github.com/KULLANICI_ADIN/turkish-medical-rag-chatbot.git
-cd turkish-medical-rag-chatbot
-
-# Virtual environment oluştur
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Kütüphaneleri yükle
-pip install -r requirements.txt
-```
-
-### 2️⃣ Kaggle Notebook'u Çalıştırma
-```bash
-# Jupyter Notebook başlat
-jupyter notebook turkish_medical_rag_chatbot.ipynb
-
-# Veya Kaggle'da direkt aç ve "Run All" yap
-```
-
-**Not:** Notebook'ta tüm hücreler sırayla çalıştırılmalıdır:
-1. Kütüphane kurulumu
-2. Dataset yükleme (Hugging Face'ten)
-3. Veri temizleme
-4. Chunking
-5. Embedding oluşturma
-6. FAISS index kaydetme
-
-### 3️⃣ Streamlit Uygulamasını Lokal Çalıştırma
-```bash
-# FAISS index'i indir (Hugging Face Space'ten veya Kaggle'dan)
-# faiss_index.pkl dosyasını proje klasörüne koy
-
-# Gemini API Key al
-# https://aistudio.google.com/apikey
-
-# Environment variable olarak ayarla
-export GEMINI_API_KEY="your-api-key-here"
-
-# Streamlit'i başlat
-streamlit run app.py
-```
-
-Tarayıcıda `http://localhost:8501` adresinde açılır.
 
 ---
 
@@ -198,17 +146,11 @@ Tarayıcıda `http://localhost:8501` adresinde açılır.
 4. **Kullanıcı Dostu:** Chat arayüzü ile kolay kullanım
 5. **Ölçeklenebilir:** Yeni makaleler kolayca eklenebilir
 
-### 📊 Örnek Sorgular ve Sonuçlar:
+### 📊 Örnek Sorgular:
 
 **Soru 1:** "Hamilelerde yapılan testler nelerdir?"
-- ✅ 3 ilgili makale bulundu
-- ✅ Kaynaklarla destekli cevap verildi
-- ⏱️ Yanıt süresi: 3.2 saniye
 
 **Soru 2:** "Migren ağrısı nasıl geçer?"
-- ✅ Migren tedavi yöntemleri listelendi
-- ✅ Kaynak makaleler gösterildi
-- ⏱️ Yanıt süresi: 2.8 saniye
 
 ---
 
