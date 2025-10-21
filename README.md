@@ -128,7 +128,7 @@ answer = gemini.generate(prompt)
 | Chunk Sayısı | 244,150 |
 | Embedding Süresi | ~3 dakika (GPU) |
 | Arama Hızı | <100ms |
-| Cevap Süresi | 2-4 saniye |
+| Cevap Süresi | 8-10 saniye |
 | FAISS Index Boyutu | 561 MB |
 
 ---
@@ -159,13 +159,6 @@ answer = gemini.generate(prompt)
 ### 🚀 Canlı Demo:
 **👉 [Turkish Medical Chatbot - Hugging Face Spaces](https://huggingface.co/spaces/KULLANICI_ADIN/turkish-medical-chatbot)**
 
-### Kullanım Adımları:
-
-1. **Linke Tıkla:** Yukarıdaki Hugging Face Spaces linkine git
-2. **Bekle:** İlk açılışta model yüklenir (~10 saniye)
-3. **Soru Sor:** Alt taraftaki chat kutusuna sağlık sorunuzu yazın
-4. **Cevap Al:** 2-4 saniye içinde kaynaklı cevap gelir
-5. **Kaynakları Gör:** "📚 Kaynaklar" bölümünü açarak hangi makalelerden bilgi geldiğini görün
 
 ### Özellikler:
 
@@ -216,18 +209,32 @@ index.add(embeddings_array)  # 244,150 vektör eklendi
 
 ### Prompt Engineering:
 ```python
-"""Sen samimi, yardımsever bir Türkçe sağlık asistanısın.
-
-KAYNAKLARDAN BİLGİLER: {context}
+"""Sen uzman bir tıp doktorusun. Aşağıdaki bilgileri AKILLICA kullan:
+KAYNAK BİLGİLER:
+{context}
 KULLANICI SORUSU: {question}
-
-KURALLAR:
-- Kısa ve öz cevap ver (5-6 cümle)
-- Madde işaretleri kullan
-- Kaynaklarda bilgi yoksa belirt
-"""
+**AKILLI KAYNAK KULLANIMI:**
+- Kaynaklar GERÇEKTEN ilgiliyse onlara dayan
+- Kaynaklar ilgisizse KENDİ TIBBİ BİLGİNİ kullan
+- Asla "kaynaklarda bilgi yok" deme
+- Her zaman yardımcı olmaya çalış
+**KURALLAR:**
+1. Önce empati kur ("Geçmiş olsun")
+2. Olası nedenleri sırala
+3. Tedavi yöntemlerini açıkla
+4. Ne zaman doktora gitmeli belirt
+5. Pratik öneriler ver
 ```
+## ⚠️ Sistem Sınırlılıkları
 
+### Veri Seti Dağılımı:
+- **Güçlü Alanlar:** Psikoloji (%18), Kadın Hastalıkları (%11), Beslenme (%10)
+- **Zayıf Alanlar:** Dahiliye (%1.8), Kardiyoloji, Nöroloji
+
+### Performans Notları:
+- Nadir uzmanlık alanlarında tutarsızlık olabilir
+- Kaynak gösterme mekanizması geliştirme aşamasında
+- Sistem akıllı fallback ile her soruya cevap vermeye çalışır
 ---
 
 ## 🤝 Katkıda Bulunma
@@ -244,7 +251,7 @@ Bu proje eğitim amaçlıdır. Dataset CC BY 4.0 lisansı altındadır.
 
 ## 👨‍💻 Geliştirici
 
-**[ADIN SOYADIN]**
+**Seymen Sezgin**
 - GitHub: [@KULLANICI_ADIN](https://github.com/KULLANICI_ADIN)
 - LinkedIn: [linkedin.com/in/PROFILIN](https://linkedin.com/in/PROFILIN)
 
