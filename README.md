@@ -156,8 +156,8 @@ answer = gemini.generate(prompt)
 
 ## 🌐 Web Arayüzü & Kullanım Kılavuzu
 
-### 🚀 Canlı Demo:
-**👉 [Turkish Medical Chatbot - Hugging Face Spaces](https://huggingface.co/spaces/KULLANICI_ADIN/turkish-medical-chatbot)**
+### 🚀 Canlı:
+**👉 https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot**
 
 
 ### Özellikler:
@@ -169,7 +169,8 @@ answer = gemini.generate(prompt)
 
 ### 🎥 Demo GIF:
 
-![Chatbot Demo](demo.gif)
+![ ](https://github.com/syadam9/saglik-rag-chatbot/blob/main/assets/gif1.gif?raw=true)
+
 
 *GIF: Chatbot'un kullanımı gösterilmektedir*
 
