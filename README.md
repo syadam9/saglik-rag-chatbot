@@ -156,9 +156,13 @@ answer = gemini.generate(prompt)
 
 ## 🌐 Web Arayüzü & Kullanım Kılavuzu
 
-### 🚀 Canlı:
+### 🚀 Uygulama:
 **👉 https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot**
 
+![ ](https://github.com/syadam9/saglik-rag-chatbot/blob/main/assets/gif1.gif?raw=true)
+
+
+*GIF: Chatbot'un kullanımı gösterilmektedir*
 
 ### Özellikler:
 
@@ -167,28 +171,8 @@ answer = gemini.generate(prompt)
 - ✅ **Temizle Butonu:** Sohbeti sıfırlayabilirsiniz
 - ✅ **Örnek Sorular:** Hızlı başlamak için hazır sorular
 
-### 🎥 Demo GIF:
-
-![ ](https://github.com/syadam9/saglik-rag-chatbot/blob/main/assets/gif1.gif?raw=true)
-
-
-*GIF: Chatbot'un kullanımı gösterilmektedir*
-
 ---
 
-## 📂 Proje Yapısı
-```
-turkish-medical-rag-chatbot/
-│
-├── turkish_medical_rag_chatbot.ipynb  # Ana notebook (tüm adımlar)
-├── app.py                              # Streamlit web uygulaması
-├── requirements.txt                    # Python kütüphaneleri
-├── faiss_index.pkl                     # FAISS vector database (Hugging Face'te)
-├── demo.gif                            # Kullanım demo'su
-└── README.md                           # Bu dosya
-```
-
----
 
 ## 🔧 Teknik Detaylar
 
@@ -244,17 +228,11 @@ Bu proje Akbank GenAI Bootcamp kapsamında geliştirilmiştir.
 
 ---
 
-## 📜 Lisans
-
-Bu proje eğitim amaçlıdır. Dataset CC BY 4.0 lisansı altındadır.
-
 ---
 
-## 👨‍💻 Geliştirici
-
 **Seymen Sezgin**
-- GitHub: [@KULLANICI_ADIN](https://github.com/KULLANICI_ADIN)
-- LinkedIn: [linkedin.com/in/PROFILIN](https://linkedin.com/in/PROFILIN)
+Uygulama Linki : https://huggingface.co/spaces/SYAdaM9/turkish-medical-chatbot
+Kaggle Notebook Linki : https://www.kaggle.com/code/seymensezgin/turkish-medical-rag-chatbot
 
 ---
 
